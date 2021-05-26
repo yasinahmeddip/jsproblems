@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Problem 1</h4>
+    <script type="text/javascript">
+    //taking input
+    var number = window.prompt("Enter a number: ");
+    document.write("The number is " + number +"<br>");
+    //checking if positive
+    if (number > 0) 
+    {
+    document.write("The number is positive");
+    }
+
+    //checking if zero
+    else if (number == 0) 
+    {
+    document.write("The number is zero");
+    }
+    //checking if negative
+    else if (number < 0)
+    {
+    document.write("The number is negative");
+    }
+</script>
+    <h4>Problem 2</h4>
+    <script type="text/javascript">
+    //taking inputs of the sides
+    var s1 = window.prompt ("Enter the length of side 1: ");
+    var s2 = window.prompt ("Enter the length of side 2: ");
+    var s3 = window.prompt ("Enter the length of side 3: ");
+    document.write("The three sides are respectively side 1 = " +  s1 + ", side 2 = " + s2 + ", side 3 = " + s3 + "<br>");
+
+    //checking if the triangle is equilateral
+    if (s1 == s2 && s2 == s3) {
+        document.write("The triangle is equilateral");
+    }
+
+    //checking if the triangle is isosceles 
+    if (s1 == s2 && s2 != s3) {
+        document.write("The triangle is isosceles");
+    }
+    else if (s1 != s2 && s2 == s3) {
+        document.write("The triangle is isosceles");
+    }
+    else if (s1 != s2 && s1 == s3) {
+        document.write("The triangle is isosceles");
+    }
+
+
+    //checking if the triangle is scalene 
+    if (s1 != s2 && s2 != s3 && s3 != s1) {
+        document.write("The triangle is scalene");
+    }
+</script>
+    <h4>Problem 3</h4>
+    <script type="text/javascript">
+    var s1 = window.prompt ("Enter the length of side 1: ");
+    var s2 = window.prompt ("Enter the length of side 2: ");
+    var s3 = window.prompt ("Enter the length of side 3: ");
+    document.write("The three sides are respectively side 1 = " +  s1 + ", side 2 = " + s2 + ", side 3 = " + s3 + "<br>");
+    var p1 = s1+s2;
+    var p2 = s2+s3;
+    var p3 = s3+s1;
+    //checking if the triangle is possible to create
+    if (p1 > s3 && p2 > s1 && p3 > s2) {
+        document.write("The triangle is possible to create");
+    }
+    else {
+        document.write("The triangle is NOT possible to create");
+    }
+
+</script>
+    <h4>Problem 4</h4>
+    <script type="text/javascript">
+    //taking input
+    var phy = window.prompt ("Enter your marks of Physics: ");
+    var che = window.prompt ("Enter your marks of Chemistry: ");
+    var bio = window.prompt ("Enter your marks of Biology: ");
+    var mat = window.prompt ("Enter your marks of Mathematic: "); 
+    var com = window.prompt ("Enter your marks of Computer: ");
+    var total = 500;
+
+    document.write("Your marks are: Physics = " + phy + ", Chemistry = " + che + ", Biology = " + bio + ", Mathematic = " + mat + ", Computer = " + com + "<br>");
+//finding percentage 
+    var add = parseInt(phy, 10)+parseInt(che, 10)+parseInt(bio, 10)+parseInt(mat, 10)+parseInt(com, 10);
+    var per = (add*100)/total;
+    document.write("Your total Percentage is: " + per + "%" + "<br>");
+    //finding grades
+    if (per >= 90 && per <= 100) {
+        document.write("Congratulations! Your grade is: Grade A!");
+    }
+    else if (per < 90 && per >= 80) {
+        document.write("Good Work! Your grade is: Grade B!");
+    }
+    else if (per < 80 && per >= 70) {
+        document.write("Good! Your grade is: Grade C!");
+    }
+    else if (per < 70 && per >= 60) {
+        document.write("You have passed! Your grade is: Grade D!");
+    }
+    else if (per < 60 && per >= 40) {
+        document.write("Work on yourself more! Your grade is: Grade E!");
+    }
+    else if (per < 40) {
+        document.write("Sorry! You have FAILED! Your grade is: Grade F!");
+    }
+    else{
+        document.write("INVALID!!!");
+    }
+    
+</script>
+    <h4>Problem 5</h4>
+<script type="text/javascript">
+    //taking input
+    var bill = window.prompt ("Enter your total electricity unit: ");
+    document.write("Your total Electricity Unit is: " + bill + "<br>");
+    //calculating bill
+    if (bill <= 50) {
+        var charge = parseInt(bill, 10)*0.50;
+        document.write("Your total Unit Charge is: " + charge + " taka" + "<br>");
+    }
+    else if (bill <= 150 && bill > 50) {
+        var charge = parseInt(bill, 10)*0.75;
+        document.write("Your total Unit Charge is: " + charge + " taka" + "<br>");
+    }
+    else if (bill <= 250 && bill > 150) {
+        var charge = parseInt(bill, 10)*1.20;
+        document.write("Your total Unit Charge is: " + charge + " taka" + "<br>");
+    }
+    else{
+        var charge = parseInt(bill, 10)*1.50;
+        document.write("Your total Unit Charge is: " + charge + " taka" + "<br>");
+    }
+
+    var addi = (20*charge)/100;
+    document.write("An additional surcharge of 20% is: " + addi + " taka" + "<br>");
+    var total = charge+addi;
+    document.write("Your total bill is: " + total + " taka" + "<br>");
+</script>
+</body>
+</html>
